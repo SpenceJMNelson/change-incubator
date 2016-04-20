@@ -6,8 +6,14 @@
       <div class="centered">
         <div class="section-marker"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/indicator-04.svg" class="indicator-img"></div>
 
-        <h3><a href="<?php echo get_page_link(115); ?>" class="w-button button orange-outline">Learn More About The Change Incubator</a></h3>
-        <p>or Check out additional resources to help you build effective,<br/> open and honest relationships with the nonprofits you support.</p>
+        <?php 
+              $value = get_field( "resource_section-intro", 201 );
+              if( $value ) {
+              echo $value;
+              } else {
+              echo '';
+              }
+          ?>
       </div>
       <div class="spacer-4em"></div>
       <div class="w-row">

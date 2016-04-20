@@ -1,9 +1,14 @@
 <div class="content-callout-section">
    <div class="w-container">
       <div class="centered">
-        <h3><a href="<?php echo get_page_link(115); ?>" class="w-button button orange-outline">Learn More About The Change Incubator</a></h3>
-        
-        <p>or Check out additional resources to help you build effective,<br/> open and honest relationships with the nonprofits you support.</p>
+        <?php 
+              $value = get_field( "resource_section-intro", 201 );
+              if( $value ) {
+              echo $value;
+              } else {
+              echo '';
+              }
+          ?>
       </div>
       <div class="spacer-4em"></div>
       <div class="w-row">

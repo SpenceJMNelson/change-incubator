@@ -6,7 +6,8 @@ function register_my_menus() {
       'header-menu' => __( 'Header Menu' ),
       'challenge-menu' => __( 'Challenge Menu' ),
       'solution-menu' => __( 'Solution Menu' ),
-      'resources-menu' => __( 'Resources Menu' )
+      'resources-menu' => __( 'Resources Menu' ),
+      'footer-menu' => __( 'Footer Menu' )
 
     )
   );

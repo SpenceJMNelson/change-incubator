@@ -9,6 +9,9 @@
             <br>info@geofunders.org</p>
         </div>
         <div class="w-col w-col-6">
+          <div class="footer-callout">
+            <?php $value = get_field( "footer_callout_section", 201 ); if( $value ) { echo $value; } else { echo ''; } ?>
+          </div>
           <div class="footer-links"><a href="<?php echo get_page_link(132); ?>" class="footer-link">Contact us</a><a href="<?php echo get_page_link(134); ?>" class="footer-link">Privacy Policy</a>
           </div>
         </div>
