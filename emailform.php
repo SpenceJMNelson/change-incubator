@@ -2,22 +2,31 @@
     <div class="narrow-container">
       <div class="w-row">
         <div class="w-col w-col-6">
-          <p class="page-level-intro white">Seeing issues in your organization? Get in touch and join the Incubator.</p>
+          <p class="page-level-intro white">
+
+          <?php 
+              $value = get_field( "email_description", 4 );
+
+              if( $value ) {
+
+              echo $value;
+
+              } else {
+
+              echo 'empty';
+
+              }
+          ?>
+
+          </p>
         </div>
         <div class="w-col w-col-6">
-          <div class="w-form">
-            <form id="email-form" name="email-form" data-name="Email Form" class="w-clearfix">
-              <input id="name" type="email" placeholder="Enter your email" name="name" data-name="Name" class="w-input callout-email-signup">
-              <input type="submit" value="›" data-wait="Please wait..." class="w-button callout-submit-button">
-            </form>
-            <div class="w-form-done">
-              <p>Thank you! Your submission has been received!</p>
-            </div>
-            <div class="w-form-fail">
-              <p>Oops! Something went wrong while submitting the form</p>
-            </div>
-          </div>
+          <?php
+        gravity_form( 1, $display_title = false, $display_description = false, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true );
+        ?>
         </div>
+        
+
       </div>
     </div>
   </div>

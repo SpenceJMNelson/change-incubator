@@ -1,7 +1,7 @@
   <div class="w-section callout-section footer-section">
     <div class="narrow-container">
       <div class="w-row">
-        <div class="w-col w-col-6"><img width="159" src="<?php bloginfo('stylesheet_directory'); ?>/images/whitelogogeo.svg" class="footer-logo">
+        <div class="w-col w-col-6"><a href="http://www.geofunders.org"><img width="159" src="<?php bloginfo('stylesheet_directory'); ?>/images/whitelogogeo.svg" class="footer-logo"></a>
           <p class="footer-text">1725 DeSales St. NW Suite 404
             <br>Washington, DC 20036
             <br>Phone: (202) 898-1840
@@ -9,13 +9,13 @@
             <br>info@geofunders.org</p>
         </div>
         <div class="w-col w-col-6">
-          <div class="footer-links"><a href="#" class="footer-link">Contact us</a><a href="#" class="footer-link">Privacy Policy</a>
+          <div class="footer-links"><a href="<?php echo get_page_link(132); ?>" class="footer-link">Contact us</a><a href="<?php echo get_page_link(134); ?>" class="footer-link">Privacy Policy</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-clearfix w-hidden-small w-hidden-tiny fixed-nav"><img width="184" src="<?php bloginfo('stylesheet_directory'); ?>/images/ci-logo.svg" class="sticky-logo">
+  <div class="w-clearfix w-hidden-small w-hidden-tiny fixed-nav"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img width="184" src="<?php bloginfo('stylesheet_directory'); ?>/images/ci-logo.svg" class="sticky-logo"></a>
     <div class="fixed-nav-items">
       <div class="nav-object"><?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'intro-area-link' ) ); ?>
       </div>

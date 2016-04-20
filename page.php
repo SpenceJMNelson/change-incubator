@@ -19,14 +19,47 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <div class="narrow-container">
-      <h2><?php the_title(); ?></h2>
-      <?php wp_nav_menu( array( 'theme_location' => 'secondary-menu', 'container_class' => 'secondary-links' ) ); ?>
+
+    <div class="secondary-links">
+
+        
+        
+
+              <?php
+        if ( $post->post_parent ) {
+            $children = wp_list_pages( array(
+                'title_li' => '',
+                'child_of' => $post->post_parent,
+                'echo'     => 0
+            ) );
+        } else {
+            $children = wp_list_pages( array(
+                'title_li' => '',
+                'child_of' => $post->ID,
+                'echo'     => 0
+            ) );
+        }
+         
+        if ( $children ) : ?>
+            <ul>
+                <?php if($post->post_parent) {
+          $parent_link = get_permalink($post->post_parent); ?>
+        <a class="subnav-parent-link" href="<?php echo $parent_link; ?>">&lsaquo;&nbsp;&nbsp;<?php echo get_the_title($post->post_parent);?></a>
+        <?php } ?>
+                <?php echo $children; ?>
+            </ul>
+
+  </div>
+<?php endif; ?>
+      
     </div>
   </div>
 
   <div class="w-section interior-content-section">
     <div class="narrow-container">
+    <h2><?php the_title(); ?></h2>
     <div class="w-richtext w-clearfix">
+    <p class="page-level-intro"><?php the_field('page_intro'); ?></p>
     <?php the_content(__('(more...)')); ?>
     </div>
     </div>

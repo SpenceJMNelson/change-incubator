@@ -19,7 +19,7 @@
     });
   </script>
   <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
-  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/webclip.png">
 </head>
 <body class="body-styles">

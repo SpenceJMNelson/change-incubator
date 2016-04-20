@@ -20,8 +20,17 @@
 
     <div class="narrow-container">
       <h2><?php the_title(); ?></h2>
-      <?php wp_nav_menu( array( 'theme_location' => 'solution-menu', 'container_class' => 'secondary-links' ) ); ?>
+        <div class="secondary-links">
+        <?php
+        $children = wp_list_pages( 'title_li=&child_of='.$post->ID.'&echo=0' );
+        if ( $children) : ?>
+        <ul>
+        <?php echo $children; ?>
+        </ul>
+        <?php endif; ?>
+        </div>
     </div>
+    
   </div>
 
   <div class="w-section interior-content-section">
@@ -35,7 +44,9 @@
 
   <?php endwhile; else: ?>
   <p><?php _e('Sorry, no posts matched your criteria.'); ?></p><?php endif; ?>
-  
-  <?php include ('emailform.php' ); ?>
+
+<?php include ('contentcallout2.php' ); ?>
+
+<?php include ('emailform.php' ); ?>
 
 <?php get_footer(); ?>

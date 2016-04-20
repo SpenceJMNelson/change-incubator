@@ -15,6 +15,7 @@
       <div class="column-container-wider"></div>
     </div>
     <div class="narrow-container">
+    <div class="spacer-4em"></div>
       <h2>Resources</h2>
       <?php wp_nav_menu( array( 'theme_location' => 'resources-menu', 'container_class' => 'secondary-links' ) ); ?>
     </div>
@@ -30,7 +31,7 @@
 
     <div class="post-content index-post-content">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <div>
+      <div class="post-wrapper">
       <span class="resource-tag"><?php the_category(); ?></span>
         <h2 class="index-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
         <div class="w-clearfix byline"><img src="<?php the_field('author_photo'); ?>" class="author-image">
@@ -38,7 +39,7 @@
           </div>
         </div>
         <div class="w-richtext w-clearfix">
-          <p class="page-level-intro"><?php echo(get_the_excerpt()); ?></p>
+          <p class="page-level-intro pli-small"><?php echo(get_the_excerpt()); ?></p>
         </div>
       </div>
       <?php endwhile; else: ?>
